@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+html{
+    font-size: 62.5%; /*16px*0.625=10px*/
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #333333;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.6rem;
+}
+
+table{
+    box-sizing: border-box;
+    margin: 30px 0;
+    width: 100%;
+    border: solid 1px;
+}
+
+table th{
+    box-sizing: border-box;
+    width: 30%;
+    padding: 10px;
+    border: solid 1px;
+}
+
+table td{
+    text-align: center;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 10px;
+    border: solid 1px;
+}
+
+/* ----------------
+    common 
+   --------------- */
+
+
+.text-center{
+    text-align: center;
+}
+
+.site-title{
+    font-size: 3.6rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.content-title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding: 30px 0;
+}
+
+/* .content-message{
+    margin: 30px 0 0;
+} */
+
+
+/* ----------------
+    header
+   --------------- */
+
+.header{
+    max-width: 1366px;
+    margin: auto;
+}
+
+.topbar{
+    display: flex;
+    background-color: #f2f2f2;
+    font-size: 2.4rem;
+    height: 80px;
+    /*Top-barを真ん中にする*/
+    text-align: center;
+}
+
+.top-title{
+    margin: auto;
+    margin-left: 90px;
+}
+
+.nav-list{
+    display: flex;
+    padding: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    display: block;
+    margin-right: 50px;
+    text-transform: uppercase;
+}
+
+/* ----------------
+    story
+   --------------- */
+
+.story-wrapper{
+    max-width: 1366px;
+    /*margin autoで真ん中*/
+    margin: auto;
+    padding: 0 0 90px;
+    text-align: center;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.story-message{
+    line-height: 1.75;
+    padding: 0 0 30px;
+}
+
+/* ----------------
+    ルール
+   --------------- */
+
+.rule-wrapper{
+    max-width: 1366px;
+    margin: auto;
+    padding: 0 0 90px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.list-wrapper{
+    display: flex;
+    margin: 0 auto 0;
+    width: 1000px;
+    justify-content: center;
+}
+
+.rule-list{
+    margin: 0 60px 0;
+    padding-left: 30px;
+}
+
+.list-item{
+    list-style-type: decimal;
+    text-align: left;
+    padding: 5px 0;
+    line-height: 1.75;
+}
+
+.deme-picture{
+    margin: 0 auto;
+}
+
+
+/* ----------------
+    player
+   --------------- */
+
+.playground-wrapper{
+    max-width: 1366px;
+    margin: auto;
+    background-color: #f2f2f2;
+}
+
+.player-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0;
+}
+
+.flex-item:nth-child(2){
+    align-items: flex-start;
+}
+
+.player{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.player-item{
+    margin-right: 0px;
+}
+
+.picture{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nokori{
+    margin: 0 auto;
+}
+
+.nokori-num{
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.deme{
+    display: flex;
+    box-sizing: border-box;
+    border: solid 1px #000000;
+    justify-content: center;
+    margin: 30px 0 0;
+    background-color: #fff;
+}
+
+.table{
+    background-color: #fff;
+}
+
+.player-results{
+    width: 300px;
+}
+
+.result{
+    margin: 60px 0 0;
+    font-size: 3.6rem;
+    font-size: bold;
+}
+
+.btn-reset{
+    padding: 0 0 30px;
+}
+
+.perica-wrapper{
+    text-align: center;
+    line-height: 1.75;
+}
+
+.kake{
+    width: 75px;
+}
+
+
+/* ----------------
+    footer
+   --------------- */
+
+.footer{
+    max-width: 1366px;
+    margin: auto;
+    padding: 30px 0;
+    background-color: #707070;
+}
+
+.copyrights{
+    color: #fff;
+}
+
+/* ----------------
+    コピペしてきたボタンスタイル
+   --------------- */
+
+
+/* 
+https://dubdesign.net/download/html-css/button-design/ 
+solid017 */
+.button_solid017{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #543618;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #eeee;
+    border-radius: 50px;
+    border: 0.2rem solid #543618;
+    box-shadow: 0.2rem 0.2rem 0px 0.1rem #cccccc;
+}
+.button_solid017:hover {
+  transform: translate3d(0.2rem, 0.2rem, 0);
+  box-shadow: none;
+  opacity: 1;
+  transition: all 0.2s;
+}
+.button_solid017:after {
+    /* content: ''; */
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #543618;
+    border-right: 3px solid #543618;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チンチロリン</title>
+    <meta name="description" content="地下チンチロリン">
+
+    <!--Open Graph Protcol-->
+    <!--SNSでシェアした際にタイトルやイメージ画像、詳細などを表示する-->
+    <meta property="og:title" content="Underground chinchirorin">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="#">
+    <meta property="og:image" content="images/header_logo.png">
+    <meta property="og:site_name" content="Underground chinchirorin game">
+    <meta property="og:description" content="Underground chinchirorin gameがplay可能">
+
+    <!--携帯で見た時に番号に電話リンクをつけない-->
+    <meta name="format-detection" content="telephone=no">
+
+    <!--Faviconの設定-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="topbar">
+            <h1 class="text-center site-title top-title">地下チンチロリン</h1>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#story">Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#rule">Rule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#playground">Playground</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    
+    <div class="story-wrapper">
+        <h2 class="text-center content-title" id="story">Story</h2>
+        <p class="story-message">
+            多額の借金を抱え、地下生活を余儀なくされた・・・<br>
+            日々の重労働に耐えるも、返済できる借金はごくわずか・・・<br>
+        </p>
+        <p class="story-message">
+            そんな中、班長からゲームをしないかと誘われた・・・<br>
+            「これに勝てば地上に出られるかもしれないぞ。
+            俺はもう何回も地上に出ている。<br>
+            地上でのビールの味は格別だぞ。」
+        </p>
+        <p class="story-message">
+            正直、うらやましいと思った・・・<br>
+            イカサマもあるだろうが、やってみる価値はある・・・<br>
+            そう思って班長とともに賭博場へ向かうのであった・・・
+        </p>
+    </div>
+    <!-- <h2 class="text-center content-title">賭博場</h2> -->
+
+    <div class="rule-wrapper">
+        <h2 class="text-center content-title" id="rule">ルール</h2>
+        <div class="list-wrapper">
+            <ol class="text-center rule-list">
+                <li class="list-item">親→子の順でサイコロを3個同時に振る。</li>
+                <li class="list-item">最大3回まで振ることができるが、目が出たらその時点で確定。</li>
+                <li class="list-item">目の強さによって勝敗が決定。</li>
+                <li class="list-item">役がある場合には強い順。</li>
+                <li class="list-item">役なしの場合、2つ揃えば残りのサイコロが通常の目。</li>
+            </ol>
+            <div class="text-center deme-picture">
+                <img src="images/demehyou.gif" alt="出目表" width="500px">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--ここからゲーム会場-->
+
+    <div class="playground-wrapper">
+        <h2 class="text-center content-title" id="playground">賭博場</h2>
+        <p class="text-center content-message">本日の賭博場の参加者はこの二人・・・</p>
+
+        <div class="player-wrapper">
+            <div class="player-item">
+                <h3 class="player text-center">班長（親）</h3>
+                <div class="picture">
+                    <img src="images/otsukihancho_400x400.jpg" alt="" height="200px">
+                </div>
+                <!--サイコロ振るボタン-->
+                <div class="text-center btn-wrapper">
+                    <button class="button_solid017" id="p-btn">サイコロを振る</button>
+                    <p class="nokori">残り: <span class="nokori-num" id="p-nokori">3</span> 回</p>
+                    
+                </div>
+                <!--出目-->
+                <div class="deme">
+                    <img src="images/dice0.png" alt="" height="90px" id="p1">
+                    <img src="images/dice0.png" alt="" height="90px" id="p2">
+                    <img src="images/dice0.png" alt="" height="90px" id="p3">
+                </div>
+                <!--スコア-->
+                <table class="table">
+                    <tr>
+                        <th>役</th><td id="p-yaku" style="font-weight: bold;"></td>
+                    </tr>
+                    <tr>
+                        <th>目</th><td id="p-me" style="font-weight: bold;"></td>
+                    </tr>                
+                </table>
+
+            </div>
+
+            <div class="player-results player-item text-center">
+                <div id="zawa"></div>
+                <div id="zawazawa"></div>
+                <p class="result" id="result"></p>
+            </div>
+
+            <div class="player-item">
+                <h3 class="player text-center">あなた（子）</h3>
+                <div class="picture">
+                    <img src="images/miyoshi_400x400.jpg" alt="" height="200px">
+                </div>
+                <!--サイコロ振るボタン-->
+                <div class="text-center btn-wrapper">
+                    <button class="button_solid017" id="c-btn">サイコロを振る</button>
+                    <p class="nokori">残り: <span class="nokori-num" id="c-nokori">3</span> 回</p>
+                </div>
+                <!--出目-->
+                <div class="deme">
+                    <img src="images/dice0.png" alt="" height="90px" id="c1">
+                    <img src="images/dice0.png" alt="" height="90px" id="c2">
+                    <img src="images/dice0.png" alt="" height="90px" id="c3">
+                </div>
+                <!--スコア-->
+                <table class="table">
+                    <tr>
+                        <th>役</th><td id="c-yaku" style="font-weight: bold;"></td>
+                    </tr>
+                    <tr>
+                        <th>目</th><td id="c-me" style="font-weight: bold;"></td>
+                    </tr>                
+                </table>
+
+                <div class="perica-wrapper">
+                    <p>賭けペリカ：<span class="nokori-num" id="kake-perica">0</span> ペリカ</p>
+                    <p>
+                        入力：<input type="number" value ="0" min="0" max ="5000" step="100" class="kake" id="bet-num">
+                    <input type="button" value="BET" id="bet-fix">
+                    </p>
+                    <p>所持ペリカ：<span class="nokori-num" id="syoji-perica">1000</span> ペリカ</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center btn-reset">
+            <button id="reset">Reset</button>
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <footer class="text-center footer">
+        <small class="copyrights">
+            Copyrights 2022 チンチロリン All Rights Reserved.
+        </small>
+    </footer>
+
+    <!--ここからJavascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/dice.js"></script>
+
+</body>
+</html>
