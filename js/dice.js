@@ -320,6 +320,38 @@ $("#reset").on("click", function() {
     $("#bet-num").val(0);
     
 })
+
+// <input type="file" id="target" multiple>にchangeイベントを設定
+document.getElementById( "yourfile" ).addEventListener( "change", function(e) {
+    var file = e.target.files[0];
+
+    var blobUrl = window.URL.createObjectURL(file);
+
+    var img = document.getElementById("yourpic");
+    img.src = blobUrl;
+
+
+    // //Color Theifというものを使ってみたいが不明
+    // //colorはr,g,bそれぞれが配列として入ります。
+    // var colorThief = new ColorThief();
+    // var img = document.querySelector('#colorthief img');
+    // var color = colorThief.getColor(img);
+    // console.log(color);
+
+	// フォームで選択された全ファイルを取得
+	// var fileList = this.files ;
+
+	// // 個数分の画像を表示する
+	// for( var i=0,l=fileList.length; l>i; i++ ) {
+	// 	// Blob URLの作成
+	// 	var blobUrl = window.URL.createObjectURL( fileList[i] ) ;
+
+	// 	// HTMLに書き出し (src属性にblob URLを指定)
+	// 	document.body.innerHTML += '<a href="' + blobUrl + '" target="_blank"><img src="' + blobUrl + '"></a>' ;
+	// }
+} ) ;
+
+
 // for loopを使う
 // $("#p-btn").on("click", function() {
 //     for (let i = 0; i < 3; i++) {

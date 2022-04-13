@@ -96,7 +96,7 @@
             <div class="player-item">
                 <h3 class="player text-center">班長（親）</h3>
                 <div class="picture">
-                    <img src="images/otsukihancho_400x400.jpg" alt="" height="200px">
+                    <img src="images/otsukihancho_400x400.jpg" alt="" height="200px" id="hancho">
                 </div>
                 <!--サイコロ振るボタン-->
                 <div class="text-center btn-wrapper">
@@ -129,10 +129,17 @@
             </div>
 
             <div class="player-item">
-                <h3 class="player text-center">あなた（子）</h3>
+                <label>
+                    <h3 class="player text-center">あなた（子）</h3>
+                    <input id="yourfile" type="file" class="file-select">
+                </label>
                 <div class="picture">
-                    <img src="images/miyoshi_400x400.jpg" alt="" height="200px">
+                    <img id="yourpic" height="200px">
+
+                    <!--元々の画像-->
+                    <!-- <img src="images/miyoshi_400x400.jpg" alt="" height="200px"> -->
                 </div>
+
                 <!--サイコロ振るボタン-->
                 <div class="text-center btn-wrapper">
                     <button class="button_solid017" id="c-btn">サイコロを振る</button>

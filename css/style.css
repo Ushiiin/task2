@@ -167,9 +167,9 @@ table td{
     margin: 30px 0 0;
 }
 
-.flex-item:nth-child(2){
+/* .flex-item:nth-child(2){
     align-items: flex-start;
-}
+} */
 
 .player{
     font-size: 1.8rem;
@@ -178,6 +178,11 @@ table td{
 
 .player-item{
     margin-right: 0px;
+    align-self: flex-start;
+}
+
+.file-select{
+    display: none;
 }
 
 .picture{
