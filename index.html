@@ -130,11 +130,16 @@
 
             <div class="player-item">
                 <label>
-                    <h3 class="player text-center">あなた（子）</h3>
+                    <h3 class="player text-center">
+                        あなた（子）
+                        <img src="images/clip.png" alt="clipicon" height="20px">
+                    </h3>
                     <input id="yourfile" type="file" class="file-select">
                 </label>
                 <div class="picture">
-                    <img id="yourpic" height="200px">
+                    <!--canvasは高さを指定しても読み込むとDefault値になるのでCSSで指定-->
+                    <canvas class="yourcanvas" id="yourpic"></canvas>
+                    <!-- <img id="yourpic" height="200px"> -->
 
                     <!--元々の画像-->
                     <!-- <img src="images/miyoshi_400x400.jpg" alt="" height="200px"> -->
@@ -189,6 +194,7 @@
     <!--ここからJavascript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/dice.js"></script>
+    <script src="https://docs.opencv.org/4.5.5/opencv.js"></script>
 
 </body>
 </html>

@@ -321,6 +321,28 @@ $("#reset").on("click", function() {
     
 })
 
+//本当はOPENCVで画像のサイズや色を取得したかったができず。
+// ファイル読み込み処理
+const onLoadImage = e => {
+    const img = new Image();
+    img.onload = () => {
+        const mat = cv.imread(img);
+        cv.imshow('yourpic', mat);
+        mat.delete();
+    };
+    img.src = URL.createObjectURL(e.target.files[0]);
+};
+
+// ページ読み込み後処理
+window.onload = () => {
+    // input要素
+    const input = document.getElementById('yourfile');
+    // input要素のchangeイベント登録
+    input.addEventListener('change', onLoadImage);
+};
+
+
+
 // <input type="file" id="target" multiple>にchangeイベントを設定
 document.getElementById( "yourfile" ).addEventListener( "change", function(e) {
     var file = e.target.files[0];
@@ -329,6 +351,8 @@ document.getElementById( "yourfile" ).addEventListener( "change", function(e) {
 
     var img = document.getElementById("yourpic");
     img.src = blobUrl;
+
+    const mat = cv.imread("yourpic");
 
 
     // //Color Theifというものを使ってみたいが不明
